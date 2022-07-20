@@ -1,0 +1,6 @@
+/jmeter-docker-compose-starterkit/
+/jmeter-k8s-nilkamal
+.DS_Store
+jmeter-k8s-starterkit/kubectl_commands
+jmeter-k8s-starterkit/LICENSE
+jmeter-k8s-starterkit/README.md
