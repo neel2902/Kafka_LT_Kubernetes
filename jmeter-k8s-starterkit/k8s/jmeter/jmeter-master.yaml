@@ -74,7 +74,7 @@ spec:
       containers:
       - name: jmmaster
         image: nilkamalth/jmeterbase
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         volumeMounts:
             - mountPath: /report
               name: jmeter-data-dir
