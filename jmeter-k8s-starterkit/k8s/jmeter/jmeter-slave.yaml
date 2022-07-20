@@ -71,8 +71,8 @@ spec:
     spec:
       containers:
       - name: jmslave
-        image: nilkamal/jmeterbase
-        imagePullPolicy: IfNotPresent
+        image: nilkamalth/jmeterbase
+        imagePullPolicy: Always
         env:
         - name: MODE
           value: "SLAVE"

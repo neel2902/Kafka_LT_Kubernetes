@@ -73,7 +73,7 @@ spec:
         fsGroup: 1000
       containers:
       - name: jmmaster
-        image: nilkamal/jmeterbase
+        image: nilkamalth/jmeterbase
         imagePullPolicy: IfNotPresent
         volumeMounts:
             - mountPath: /report
