@@ -1,3 +1,4 @@
+#!/bin/sh
 git clone https://github.com/nilkamalthakuria/Kafka_LT_Kubernetes.git
 echo "Installing strimzi kafka operator"
 helm repo add strimzi https://strimzi.io/charts/
