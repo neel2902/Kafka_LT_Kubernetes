@@ -61,7 +61,7 @@ fi
 
 
 echo "Checking if jmeter kubernetes folder exists"
-if [ -d "/Kafka_LT_Kubernetes" ] 
+if [ -d "${HOME}/Kafka_LT_Kubernetes" ] 
 then
     echo "Kafka_LT_Kubernetes Repository found locally, skipping git clone" 
 else
