@@ -69,13 +69,13 @@ else
     # CLONE GIT REPO
     echo "Cloning github repository"
     git clone https://github.com/nilkamalthakuria/Kafka_LT_Kubernetes.git
-    echo "Installing strimzi kafka operator"
-    helm repo add strimzi https://strimzi.io/charts/
-    helm install strimzi-kafka-operator strimzi/strimzi-kafka-operator
-    echo "Initiating Kafka Cluster using tirth-test-kafka"
-    cd ./tirth-test-kafka
-    helm install tirth-test-kafka .
-    cd ..
+    # echo "Installing strimzi kafka operator"
+    # helm repo add strimzi https://strimzi.io/charts/
+    # helm install strimzi-kafka-operator strimzi/strimzi-kafka-operator
+    # echo "Initiating Kafka Cluster using tirth-test-kafka"
+    # cd ./tirth-test-kafka
+    # helm install tirth-test-kafka .
+    # cd ..
     echo "Creating starterkit pods and services"
     kubectl create -R -f ${HOME}/Kafka_LT_Kubernetes/jmeter-k8s-starterkit/k8s/
 fi
@@ -139,5 +139,5 @@ fi
 echo "Final .env file"
 cat ${env_file}
 
-start_test="${HOME}/Kafka_LT_Kubernetes/jmeter-k8s-starterkit/start_test.sh"
-${start_test} -n default -j kafka.jmx -i ${nb_injectors}
+cd ${HOME}/Kafka_LT_Kubernetes/jmeter-k8s-starterkit
+./start_test.sh -n default -j kafka.jmx -i ${nb_injectors}
